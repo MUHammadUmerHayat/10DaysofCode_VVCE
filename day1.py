@@ -1,29 +1,32 @@
 if __name__ == '__main__':
     # Given
-    n = 5
-    d = 4
-    a = [1,2,3,4,5]
+    nd = input().split()
+    n = int(nd[0])
+    d = int(nd[1])
+    a = list(map(int, input().rstrip().split()))
 
     #Problem #1 Solution
-    ans = ""
+    pos = []
+    ans = []
+    for j in range(0,n,1):
+        pos.append((j+d)%n)
+    for i in pos:
+        ans.append(a[i])
+    print(str(ans).replace('[','').replace(']','').replace(',',""))
 
-    # Rotating-Left-Array
-    for i in range(0,d,1):
-        temp = a[0]
-        for j in range(0,n-1,1):
-            a[j] = a[j+1]
-        a[n-1] = temp
 
-    # Converting List to String
-    for i in a:
-        ans = ans + str(i) + " "
-    print(ans)
 
     #Output LEFT ROTATE ARRAY
 
-    # given
+    # Given
     # d => Number of Rotation
     # n => List Length
     # a => Given List
 
-    # ans = 5 1 2 3 4
+    #Test Case 0
+    #d = 4
+    #n = 5
+    #a = [1,2,3,4,5]
+
+    #Result
+    #a = 5 1 2 3 4
