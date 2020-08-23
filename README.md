@@ -9,3 +9,6 @@ Solved Day 3 Problem => Equal Stacks
 Solved Day 4 Problem => Queue using Two Stacks
 
 Solved Day 5 Problem => Sorting: Comparator
+
+Solved Day 6 Problem => KnightL on a Chessboard
+
